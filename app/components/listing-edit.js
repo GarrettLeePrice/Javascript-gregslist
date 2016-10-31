@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showListingEdit() {
       this.set('displayListingEdit', true);
     },
+    deleteListing(listing) {
+      this.sendAction('deleteListing', listing);
+    },
     hideListingEdit() {
       this.set('displayListingEdit', false);
     },
