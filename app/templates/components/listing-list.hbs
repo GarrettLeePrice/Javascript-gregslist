@@ -1,3 +1,3 @@
 {{#each sortedListings as |listing|}}
-  <p>{{#link-to 'listing' listing.id}}{{listing.description}}{{/link-to}} (${{listing.price}}) - Sold by {{listing.seller}} [Posted on {{listing.postedOn}}]</p>
+  <p>{{#link-to 'listing' listing.id}}{{listing.description}}{{/link-to}} (${{listing.price}}) - Sold by {{listing.seller}} [Posted on {{listing.postedOn}}] {{listing-price listing}}</p>
 {{/each}}

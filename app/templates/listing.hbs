@@ -1,10 +1,10 @@
-<h1>{{model.description}}</h1>
+<h1>{{model.listing.description}}</h1>
 
-<p>Sold by: {{model.seller}}</p>
-<p>Price: ${{model.price}}</p>
-<p>Location: {{model.location}}</p>
-<p>Notes and Comments: {{model.note}}</p>
+<p>Sold by: {{model.listing.seller}}</p>
+<p>Price: ${{model.listing.price}}</p>
+<p>Location: {{model.listing.location}}</p>
+<p>Notes and Comments: {{model.listing.note}}</p>
 
 <hr>
 
-{{listing-edit listing=model updateListing="updateListing" deleteListing="deleteListing"}}
+{{listing-edit listing=model.listing updateListing="updateListing" deleteListing="deleteListing"}}

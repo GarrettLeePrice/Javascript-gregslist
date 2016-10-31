@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-   return this.store.findRecord('listing', params.listing_id);
+    return Ember.RSVP.hash({
+      listing: this.store.findRecord('listing', params.listing_id)
+    });
   },
+  summary: Ember.computed('listing.seller', 'listing.location', function() { return this.get('listing.seller') + ' - ' + this.get('listing.location'); }),
   actions: {
     updateListing(listing, params) {
       Object.keys(params).forEach(function(key){
