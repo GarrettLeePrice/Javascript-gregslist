@@ -6,6 +6,6 @@ export default DS.Model.extend({
   price: DS.attr('number'),
   location: DS.attr(),
   note: DS.attr(),
-  seller: DS.attr()
-
+  seller: DS.attr(),
+  postedOn: DS.attr('date')
 });
