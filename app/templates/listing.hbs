@@ -1,1 +1,10 @@
-{{outlet}}
+<h1>{{model.description}}</h1>
+
+<p>Sold by: {{model.seller}}</p>
+<p>Price: ${{model.price}}</p>
+<p>Location: {{model.location}}</p>
+<p>Notes and Comments: {{model.note}}</p>
+
+<hr>
+
+{{listing-edit listing=model updateListing="updateListing"}}
